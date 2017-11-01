@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 浩淼风来远
+title: 皓淼风来远
 subtitle: 个人生活、技术博客
-description: 浩淼风来远，整合国内外最新、最好的前端技术资源和前端开发技术的专业博客
+description: 皓淼风来远，整合国内外最新、最好的前端技术资源和前端开发技术的专业博客
 author: Ao
 language: zh-Hans
 timezone:
@@ -123,8 +123,9 @@ admin:
   username: tvrrdfn
   password_hash: $2a$10$PS0V0PuQArAmteNZRnTiTeqANz6I0eaTfKuVJ7qAJA5dE6U1CU0q2
   secret: 
-
-admin.deployCommand:
-    type: git
-    repo: git@github.com:tvrrdfn/tvrrdfn.github.io.git
-    branch: master
+  
+#评论
+disqus:
+  enable: false
+  shortname:
+  count: true

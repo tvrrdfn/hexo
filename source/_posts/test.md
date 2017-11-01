@@ -1,30 +1,13 @@
-title: test
+title: 删除已安装插件
 author: Ao
-date: 2017-06-22 15:19:49
 tags:
+  - sublime
+categories:
+  - 编辑器
+date: 2017-06-23 10:50:00
 ---
-## test
-### cest
-```
-$ dadad
-```
+1. ctr+shift+p 调出插件窗口
+2. 然后输入remove, 选择remove Package
+3. 再输入要删除的插件名称，或者在下拉列表中选择要删除的插件名称
 
-More
-
-
-dadaf
-a
-fa
-fa
-fa
-fa
-fa
-f
-
-## test2
-
-```
-dada
-ada
-dafa
-```
+<!--more-->
