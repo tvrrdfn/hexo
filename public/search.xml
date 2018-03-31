@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何让git文件名大小写敏感]]></title>
+    <url>%2F%E5%A6%82%E4%BD%95%E8%AE%A9git%E6%96%87%E4%BB%B6%E5%90%8D%E5%A4%A7%E5%B0%8F%E5%86%99%E6%95%8F%E6%84%9F%2F</url>
+    <content type="text"><![CDATA[git 默认不区分文件名大小写 当你创建一个文件后,叫 readme.md 写入内容后 提交到线上代码仓库. 然后你在本地修改文件名为 Readme.md 接着你去提交,发现代码没有变化. 1git status 无任何提示信息.其实 git 默认对于文件名大小写是不敏感的,所以上面你修改了首字母大写,但是git 并没有发现代码任何改动. 那么如何才能让 git 识别文件名大小写变化. 一 配置git 使其对文件名大小写敏感1git config core.ignorecase false 二 从git 本地仓库删除此文件,然后添加再提交(1) 删除1git rm readme.md (2) 重新添加1git add Readme.md (3)提交1git commit -m &apos;Readme.md&apos; 推荐第一种方法,配置好git 对文件名大小写敏感.]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[如何在Jenkins中给Git自动打Tag？]]></title>
+    <url>%2F%E4%BD%BF%E7%94%A8Jenkins%E7%BB%99Git%E8%87%AA%E5%8A%A8%E6%89%93Tag%2F</url>
+    <content type="text"><![CDATA[如果希望能在每次发布操作后，及时的打上Tag。我们可以在Jenkins中通过利用GIT Publisher这个插件来完成需求. 插件依赖GIT Publisher 操作及配置 在 构建后操作 中选择 GIT Publisher。 点击 Add Tag 按钮，出现设置界面。 Tag to push 可以按分支添加标签格式，例如：master-$BUILD_ID. $BUILD可以根据实际情况替换成其他变量，例如时间戳。 Create new tag 一定要勾选。 Target remote name 默认填入 origin 以上完成，在下次执行任务的时候就能自动在Git上打Tag了。 资源 Jenkins的插件安装及管理]]></content>
+      <categories>
+        <category>git</category>
+        <category>jenkins</category>
+      </categories>
+      <tags>
+        <tag>jenkins</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[mac 查看、修改文件权限的命令]]></title>
     <url>%2Fmac-%E6%9F%A5%E7%9C%8B%E3%80%81%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%9A%84%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[查看文件/文件夹权限： 查看某个文件权限的命令 1ls -l + 要查看文件的文件名 查看某个文件夹里所有文件/文件夹的权限 1ls -l + 文件夹名 如果要查看某个文件夹的权限，需要在该文件夹外部目录下执行 1ls -l 修改文件的权限修改权限的命令格式 : chmod [&lt;权限范围&gt;&lt;权限操作&gt;&lt;具体权限&gt;] [文件或目录…] &lt;权限范围&gt; u：User，即文件或目录的拥有者。 g：Group，即文件或目录的所属群组。 o：Other，除了文件或目录拥有者或所属群组之外，其他用户皆属于这个范围。 a：All，即全部的用户，包含拥有者，所属群组以及其他用户。 &lt;权限操作&gt; “+”：表示增加权限 “-“ ：表示取消权限 “=”：表示唯一设定权限 &lt;具体权限&gt; r：表示可读取 w：表示可写入 x ：表示可执行 让其他用户都可以对111.txt文件有写的权限，则执行1chmod o+w 111.txt 修改文件/文件夹用户组在 shell 中，可以使用chown命令来改变文件所有者。chown命令是change owner（改变拥有者）的缩写。需要要注意的是，用户必须是已经存在系统中的，也就是只能改变为在 /etc/passwd这个文件中有记录的用户名称才可以。 chown命令的用途很多，还可以顺便直接修改用户组的名称。此外，如果要连目录下的所有子目录或文件同时更改文件拥有者的话，直接加上 -R的参数即可。 基本语法：12chown [-R] 账号名称 文件或目录chown [-R] 账号名称:用户组名称 文件或目录 参数： -R : 进行递归( recursive )的持续更改，即连同子目录下的所有文件、目录都更新成为这个用户组。常常用在更改某一目录的情况。 示例：123sudo chown -R user:staff test/ //循环修改子集orsudo chown user:staff test/]]></content>
